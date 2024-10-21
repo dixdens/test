@@ -38,6 +38,8 @@ header{
     width: auto;
     height: 10vh;
     position: sticky;
+    top: 0;
+    background-color: rgba(25, 28, 35, 0.6);
 }
 
 nav{
@@ -79,7 +81,7 @@ header nav ul li a:hover{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 89vh;
+    height: 90vh;
     width: auto;
     display: flex;
     justify-content: flex-start;
@@ -170,8 +172,14 @@ header nav ul li a:hover{
     margin: 0 auto;
     height: 600px;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
+.grid-item:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
 .grid-item .btn {
     width: 50px;
     height: 50px;
