@@ -336,10 +336,4 @@ footer section .logo img{
         justify-content: space-between;
         height: 74vh;
     }
-
-    section:last-child{
-        border-top: 1px solid #191C23;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-    }
 }
