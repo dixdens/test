@@ -32,16 +32,27 @@ body{
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#191C23", endColorstr="#00529F", GradientType=1 );
 }
 
+h2{
+    padding-bottom: 50px;
+}
+ 
+hr{
+    width: 20%;
+    margin: 0 auto;
+    border: 1px solid #191C23;
+}
+
 section{
-    border-top: 10px solid #191C23;
+    border-top: 10px solid #191C23; /* ligne decorative separant les sections */
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     padding-top: 50px;
+    margin-bottom: 50px;
 }
 
 section:last-child{
     border-top: none;
-    border-bottom: 10px solid #191C23;
+    border-bottom: 10px solid #191C23; /* ligne deco de la derniere section */
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     padding-bottom: 50px;
@@ -70,6 +81,14 @@ header nav span img{
     height: 50px;
 }
 
+@keyframes rotating{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 header nav ul{
     width: 50%;
     display: flex;
@@ -88,7 +107,7 @@ header nav ul li a:hover{
     color: #FEBE10;
 }
 
-/** MAIN **/
+/** BANNER **/
 
 .banner{
     background-image: url(./images/thumb-1920-1359457.jpeg);
@@ -140,10 +159,8 @@ header nav ul li a:hover{
     width: 50px;
     height: 50px;
     margin-top: 20px;
-    display: inline-block;
     padding: 5px;
     background-color: #191C23;
-    color: white; 
     border-radius: 50%; 
     text-align: center; 
     background-color: rgba(25, 28, 35, 0.6);
@@ -205,6 +222,10 @@ header nav ul li a:hover{
     align-items: center;
     color: #fff;
 }
+
+.grid-item a span{
+    color: #FEBE10;
+}
 article img{
     width: 300px;
     height: 300px;
@@ -214,7 +235,7 @@ article img{
 /* PALMARES */
 
 #palmares{
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -224,6 +245,7 @@ article img{
 #palmares h2{
     color: #fff;
 }
+
 .trophy{
     width: 100%;
     display: flex;
@@ -233,8 +255,6 @@ article img{
 }
 
 .left-contain img{
-    width: 100%;
-    height: 100%;
     opacity: 0.5;
 }
 
@@ -246,8 +266,10 @@ article img{
     align-items: center;
 }
 
+/* GALLERY */
+
 #gallery{
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -257,6 +279,7 @@ article img{
 #gallery h2{
     color: #fff;
 }
+
 /* FOOTER */
 
 footer{
@@ -265,6 +288,7 @@ footer{
     justify-content: space-evenly;
     height: 30vh;
     background-color: #191C23;
+    margin-top: 50px;
 }
 
 footer section{
@@ -293,4 +317,29 @@ footer section .logo img{
 
 .mentions{
     color: #fff;
+}
+
+
+/* REPONSIVE DESKTOP */
+
+@media (max-width: 1024px) {
+    
+
+    #news{
+        height: 100%;
+    }
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #palmares{
+        justify-content: space-between;
+        height: 74vh;
+    }
+
+    section:last-child{
+        border-top: 1px solid #191C23;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
 }
