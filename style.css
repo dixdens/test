@@ -317,6 +317,7 @@ footer section .logo img{
 
 .mentions{
     color: #fff;
+    flex-direction: column-reverse;
 }
 
 
@@ -332,8 +333,12 @@ footer section .logo img{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    #gallery{
+        height: auto;
+    }
+
     #palmares{
         justify-content: space-between;
-        height: 74vh;
+        height: 75vh;
     }
 }
